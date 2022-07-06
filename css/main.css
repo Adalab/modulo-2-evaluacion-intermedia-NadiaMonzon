@@ -5,7 +5,7 @@
 
 .title {
     color: #023047;
-    font-size: 4vw;
+    font-size: 30px
 }
 
 .main {
@@ -24,11 +24,11 @@
 
 .input-text {
     color: #023047;
-    font-size: 2vw;
+    font-size: 20px
 }
 
 .input {
-    font-size: 1.5vw;
+    font-size: 13px;
     display: flex;
     align-items: center;
     background-color: #8ECAE6;
@@ -38,7 +38,7 @@
 .button {
     background-color: #FFB703;
     border-radius: 5px;
-    font-size: 1.5vw;
+    font-size: 13px;
 }
 
 .button:hover {
@@ -53,7 +53,7 @@
 .hint {
     padding: 5px;
     align-self: center;
-    font-size: 1.3vw;
+    font-size: 13px;
     background-color: #023047;
     color: white;
 }
@@ -63,10 +63,35 @@
     align-self: center;
     background-color: #023047;
     color: white;
-    font-size: 1.3vw;
-
+    font-size: 13px
 }
 
 .num {
     color: #FFB703;
+}
+
+@media all and (min-width: 768px) {
+    .title {
+        font-size: 4vw;
+    }
+
+    .input-text {
+        font-size: 2.5vw;
+    }
+
+    .input {
+        font-size: 1.5vw;
+    }
+
+    .button {
+        font-size: 1.5vw;
+    }
+
+    .hint {
+        font-size: 1.5vw;
+    }
+
+    .try {
+        font-size: 1.5vw;
+    }
 }
