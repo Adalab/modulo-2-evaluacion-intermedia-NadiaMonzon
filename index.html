@@ -8,19 +8,17 @@
     <title>Evaluación intermedia</title>
 </head>
 <body>
-    <header>
-        <h1>Adivina el número</h1>
-    </header>
-    <main>
-        <form action="">
-                <label for="">Introduce aquí tu número</label>
+    <main class="main">
+        <h1 class="title">Adivina el número</h1>
+        <form action="" class="container">
+                <label for="" class="input-text">Introduce aquí tu número</label>
                 <input type="number" name="number" class="input js_input">
-                <button class="js_btn">Prueba</button>
+                <button class="button js_btn">Prueba</button>
         </form>
 
-        <div>
-            <p class="js_hint">Pista: Escribe el número y prueba</p>
-            <p>Número de intentos: <span class="js_num">0</span></p>
+        <div class="hint-container">
+            <p class="hint js_hint">Pista: Escribe el número y prueba</p>
+            <p class="try">Número de intentos: <span class="num js_num">0</span></p>
         </div>
     </main>
 

@@ -22,18 +22,21 @@ function getHintText () {
     const numInputValue = numInput.value;
     
     if (numInputValue == randomNumber) {
-        hintText.innerHTML = `Has ganado campeona!!!`
+        hintText.innerHTML = `¡¡¡Has ganado campeona!!!`
     }
     else if (numInputValue > randomNumber) {
-        hintText.innerHTML = `Demasiado alto`
+        hintText.innerHTML = `Pista: Demasiado alto`
     }
     else if (numInputValue < randomNumber) {
-        hintText.innerHTML = `Demasiado bajo`
-    } else if (numInputValue > 100) {
-        hintText.innerHTML = `El número debe estar entre 1 y 100`
+        hintText.innerHTML = `Pista: Demasiado bajo`
+    }
+
+    
+    if (numInputValue > 100) {
+        hintText.innerHTML = `Pista: El número debe estar entre 1 y 100`
     }    
     else if (numInputValue < 0) {
-        hintText.innerHTML = `El número debe estar entre 1 y 100`
+        hintText.innerHTML = `Pista: El número debe estar entre 1 y 100`
    }
     
 };
