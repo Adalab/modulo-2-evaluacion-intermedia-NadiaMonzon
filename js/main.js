@@ -8,21 +8,25 @@ const hintText = document.querySelector('.js_hint');
 
 const tryNumber = document.querySelector('.js_num');
 
+let randomNumber = getRandomNumber(100);
+
+let countTrying = 0;
 
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
    }
 
-let randomNumber = getRandomNumber(100);
-
-console.log(randomNumber);
-
-
 function getHintText () {
-    const numInputValue = numInput.value;
+    const numInputValue = parseInt(numInput.value);
     
-    if (numInputValue == randomNumber) {
-        hintText.innerHTML = `¡¡¡Has ganado campeona!!!`
+    if (isNaN(numInputValue)){
+        hintText.innerHTML = `Tienes que poner un número válido`
+    }
+    else if (numInputValue > 100) {
+        hintText.innerHTML = `Pista: El número tiene que ser menor que 100`
+    }    
+    else if (numInputValue < 1) {
+        hintText.innerHTML = `Pista: El número debe ser mayor de 1`
     }
     else if (numInputValue > randomNumber) {
         hintText.innerHTML = `Pista: Demasiado alto`
@@ -30,18 +34,10 @@ function getHintText () {
     else if (numInputValue < randomNumber) {
         hintText.innerHTML = `Pista: Demasiado bajo`
     }
-
-    
-    if (numInputValue > 100) {
-        hintText.innerHTML = `Pista: El número debe estar entre 1 y 100`
-    }    
-    else if (numInputValue < 0) {
-        hintText.innerHTML = `Pista: El número debe estar entre 1 y 100`
-   }
-    
+    else if (numInputValue === randomNumber) {
+        hintText.innerHTML = `¡¡¡Has ganado campeona!!!`
+    } 
 };
-
-let countTrying = 0;
 
 function countText () {
     countTrying += 1;
